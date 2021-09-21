@@ -55,6 +55,7 @@ const removeDoenca = (val) => {
 }
 
 const handleSave = async () => {
+    if(queixa === null){alert('Selecione uma queixa');return;}
     if(historico.length < 10){alert('Historico deve haver no mínimo 10 caracteres');return;}
     var listDoenca = [];
     doencas.map((val) => {
@@ -95,7 +96,7 @@ const setDoencaValid = (val) =>{
      style={{flex: 1 ,justifyContent: 'center', alignItems: 'center'}}
      >
          <Ovarlay onPress={() => props.setClose()} />
-         <View style={{width: '100%', higth: '100%',justifyContent: 'center', alignItems: 'center',paddingHorizontal:25, marginTop: 150}}>
+         <View style={{width: '100%', higth: '100%',justifyContent: 'center', alignItems: 'center',paddingHorizontal:25, marginTop: 20}}>
             <HeadModal>
                 <HeadTile>
                    Anamnese

@@ -30,13 +30,13 @@ const ItemProntuario = (props) => {
         <CardBody>
             <Label>Queixa Principal</Label>
             <Txt ml='10px' mt='5px' mb='5px' size='16px'>{props.val.queixa.label}</Txt>
-            <Label>Doenças Adulto</Label>
+{  props.val.doencas.length > 0 ?   <><Label>Doenças Adulto</Label>
 
             <TagContainer>
             {props.val.doencas.map(val => (
                 <ItemDoenca unX={true}>{val.label}</ItemDoenca>
             ))}
-             </TagContainer>
+             </TagContainer></> : null}
             <Label>Histórico de Moléstia</Label>
             <Txt  ml='10px' mt='5px' mb='5px' size='16px'>{props.val.historico}</Txt>
         </CardBody>
